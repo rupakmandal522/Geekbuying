@@ -1,0 +1,641 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+   <head>
+      <meta charset="utf-8">
+      
+      
+      <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+    
+      <link rel="stylesheet" href="./Styles/furniture.css">
+      
+      <script
+      src="https://kit.fontawesome.com/24c494a6b6.js"
+      crossorigin="anonymous"
+    ></script>
+
+      <title>New-Arrivals</title>
+      <style>
+      
+        #footer{
+  width: 100%;
+  /* height: 400px; */
+  /* border: 1px solid red; */
+  padding-top: 50px;
+  display: flex;
+  margin-top: 8rem;
+  }
+  #footer>div{
+  /* border: 1px solid blue; */
+  width: 100%;
+  /* height: 200px; */
+  }
+  #social{
+  
+  display: flex;
+  /* border: 1px solid black;  */
+  
+  }
+  #social>div{
+  /* border: 1px solid; */
+  width: 100%;
+  height: 50px;
+  
+  gap: 30px;
+  }
+  .social_gap>i{
+  margin-left: 20px;
+  /* border: 1px solid red; */
+  }
+  .social_gap>div>i{
+  margin-left: 20px;
+  /* border: 1px solid red; */
+  }
+  .social_gap{
+  display: flex;
+  gap: 30px;
+  }
+  
+  #help{
+  display: flex;
+  margin-left:30px;
+  
+  }
+  #help>div{
+  width: 30%;
+  /* height: 200px; */
+  /* border: 1px solid red; */
+  font-size: 13px;
+  }
+  #scribe{
+  width: 350px;
+  height: 25px;
+  font-size: 13px;
+  margin-left: 1.5rem;
+  } 
+  #footer>div>button{
+  width: 120px;
+  height: 31px;
+  margin-left: -4px;
+  border: none;
+  
+  background-color: #074ea3;
+  color: white;
+  
+  } 
+  #hr1>hr{
+  border: none;
+  }
+  #marginleft{
+  margin-left: 100px;
+  }
+  #text{
+  width: 75%;
+
+  font-size: 13px;
+  }
+  #peo{
+  width: 80%;
+  margin: auto;
+  margin-top: 30px;
+  
+  }
+  #peopler_search{
+  width: 80%;
+  margin: auto;
+  margin-top: 20px;
+  
+  
+  }
+  #peopler_search>button{
+  gap: 30px;
+  /* border: 1px solid blue; */
+  height: 1.5rem;
+  margin-left: .5rem;
+  background-color: rgb(236, 231, 231);
+  border: none;
+  cursor: pointer;
+  
+  }
+  button:hover{
+     color: blue;
+  }
+  #lang{
+  
+  margin: auto;
+  margin-left: 200px;
+  margin-top: 20px;
+  font-weight: 600;
+  color: grey;
+  }
+  #pay{
+  margin-left: 100px;
+  margin-top: 30px;
+  
+  }
+  #pay>img{
+     width: 60rem;
+  }
+  
+  
+  
+  
+  /* product css */
+  
+  #printdata{
+      display: grid;
+      grid-template-columns: repeat(4,1fr);
+      grid-template-rows: auto;
+      gap: 20px;
+  
+  } 
+  /* #image img{
+      width: 100%;
+  } */
+  .image>img{
+      width: 100%;
+      /* border: 5px solid red; */
+      height: 400px;
+  }
+  #buybtn{
+      color: white;
+      background-color: tomato;
+      width: 70px;
+      height: 25px;
+  }
+  #geek_buying{
+       margin-left: 1rem;
+  }
+  h4{
+     margin-left: .75rem;
+     font-size: .85rem;
+  }
+  
+  
+        </style>
+     </head>
+     <body>
+    <div id="main99">
+        <div id="navbar">
+         <div id="container">
+            <div>
+                <img id="tonavimg"   src="https://img.gkbcdn.com/s3/bn/2205/1500x125-628b774b2b40c9019c2ac472.jpg" alt="">
+                <div id="secondnav">
+                    <div id="second1">
+                     <div id="iconmob"><i class="fa-thin fa-mobile"></i>
+                        </div>
+                          
+                                <div class="dropdown">
+                                    <span>Save BIG with Our app! <img id="img555" src="https://sugarbook.com/assets/img/down-arrow-light-grey.svg" alt=""></span>
+                                    <div class="dropdown-content">
+                                    <p>Get exclusive app deals and discounts, download our app & SAVE</p>
+                                    <div  id="barcode">
+                                        <div>
+                                            <img src="https://content1.geekbuying.com/V1.4/en/images/index_images/android_app.png" alt="">
+                                        </div>
+                                        <div>
+                                            <div><img src="https://content1.geekbuying.com/V1.4/en/images/index_images/app_store.jpg" alt=""></div>
+                                            <div><img src="https://content1.geekbuying.com/V1.4/en/images/index_images/google_play.jpg" alt=""></div>
+                                            <div><img src="https://content1.geekbuying.com/V1.4/en/images/index_images/gallery.jpg" alt=""></div>
+                                            
+                                          
+                                        </div>
+                                        
+                                    </div>
+                                    <h3>Go to mobile site</h3>
+                                   
+                                    </div>
+                                  </div>
+        
+                           
+                            <!--  -->
+                            
+                           
+                            
+                            <div class="dropdown">
+                                <span>Language <img id="img555" src="https://sugarbook.com/assets/img/down-arrow-light-grey.svg" alt=""></span>
+                                <div class="dropdown-content1">
+                                    <p>English</p>
+                                <p>Italiano</p>
+                                <p>Deutsch</p>
+                                <p>Español</p>
+                                <p>Français</p>
+                                <p>Português</p>
+                                <p>Slovenčina</p>
+                                <p>Magyar</p>
+                                <p>Slovenščina</p>
+                                <p>Lietuvių kalba</p>
+                                <p>Svenska</p>
+                                <p>Ελληνικά</p>
+                                <p>Dansk</p>
+                                <p>עברית</p>
+                                <p>Hrvatski jezik</p>
+                                <p>Polskie</p>
+                                <p>Limba română</p>
+                                <p>Čeština</p>
+                                <p>Japanese</p>
+        
+        
+                                </div>
+                              </div>
+        
+        
+                              
+                             
+                            <div id="navimg">
+        
+                                
+                                <!-- <div>ship to</div> -->
+                               
+        
+                            <!-- <div> Support Center </div> -->
+                            <div class="dropdown">
+                                <span>Support Center <img id="img555" src="https://sugarbook.com/assets/img/down-arrow-light-grey.svg" alt=""></span>
+                                <div class="dropdown-content">
+                                    <div>
+                                        <i class="fa-brands fa-rocketchat"></i>
+                                        <p> Live Chat</p>
+                                    </div>
+                                    <div>
+                                        <i class="fa-brands fa-rocketchat"></i>
+                                        <!-- <i class="fa-solid fa-arrow-up-right"></i> -->
+                                        <p>Ticket</p>
+                                    </div>
+                                    <div>
+                                        <i class="fa-brands fa-rocketchat"></i>
+                                        <!-- <i class="fa-solid fa-message-question"></i> -->
+                                        <p>Help Centre</p>
+                                    </div>
+                               
+                                </div>
+                              </div>
+                    </div>
+        
+                </div>
+               
+        
+            </div>
+            
+            
+           
+        
+            <div id="navbartwo">
+                <div onclick="home()"><img src="https://cdn.honey.io/images/store-logos/7480670477919437073.png" alt=""></div>
+               
+                <div class="dropdown2" style="width: 10rem;">
+                    <button onclick="myFunction()" class="dropbtn">All Categories</button>
+                    <div id="myDropdown" class="dropdown-content2">
+                    <div id="down">
+                        <div>
+                            <a href="#">All Categories</a>
+                            <a href="#">Smart Home & Garden</a>
+                            <a href="#">Phones & Accessories</a>
+                            <a href="#">Computers, Tablets & Accessories</a>
+                            <a href="#">Wearable Devices</a>
+                            <a href="#">Automobiles & Motorcycles</a>
+                         
+                         </div>
+                         <div>
+                            <a href="#">Sports & Outdoors</a>
+                            <a href="#">Consumer Electronics</a>
+                            <a href="#">TV Boxes & Mini PCs</a>
+                            <a href="#">Toys & Hobbies</a>
+                            <a href="#">Security System</a>
+                            <a href="#">Fashion</a>
+                           
+                           
+                         </div>
+                         
+        
+                    </div>
+                    </div>
+                  </div>
+        
+                  <!-- search_bar -->
+                 
+        
+        
+                  <div>
+                       <input type="text" id="query" placeholder="search by keyboards">
+                  </div>
+                  <div>
+                         <i class="fa-solid fa-magnifying-glass search"></i>
+                  </div>
+        
+                  <a class="decarution" href="SignIn.html">
+                  <div id="user">
+                      <i class="fa-regular fa-user"></i>
+                  
+                    <p>sign in</p>
+                
+                </div></a>
+        
+                
+        
+               
+        
+                <a class="decarution" href="shoppingcart.html">
+                <div id="cart">
+                    <i class="fa-solid fa-cart-shopping"></i>
+                <div>
+                    <p style="font-size:.8rem;" id="show" class="totalItemInCart">0</p>
+                    <p >Cart</p>
+                </div>
+            </div></a>
+        
+             
+                  
+            </div>
+        
+        
+            <div id="shop">
+                <div class="dropdown3">
+                    <span style="font-size: 13.5px; margin-left: 3.5rem;"> Categories <i class="fa-solid fa-caret-down"></i></span>
+                    <div class="dropdown-content3">
+                    <!-- <p>Local Warehouses</p> -->
+        
+                  <!-- <div id="drp4"> -->
+                    <div class="dropdown4">
+                        <span>Local Warehouses</span>
+                        <div class="dropdown-content4">
+                            <div id="drp4"> 
+                                <div>
+                                    <h4>EU Warehouse</h4>
+                                <p class="fade">EU Deals</p>
+                                <h4>DE Warehouse</h4>
+                                <p class="fade">DE Deals</p>
+                                <h4>PL Warehouse</h4>
+                                <h4>ES Warehouse</h4>
+                                <p class="fade">EU Deals</p>
+                                <h4>EU Warehouse</h4>
+                                <p class="fade">ES Deals</p>
+            
+                                <h4>CZ Warehouse</h4>
+                              
+                                <h4>UK Warehouse</h4>
+                                
+                                <h4>EU-3 Warehouse</h4>
+                                </div>
+                                <div>
+                                    <img id="map" src="https://img.gkbcdn.com/s3/cim/category-1301-6ETJOmbg.png" alt="">
+                                </div>
+                            </div>
+                     
+                       
+                      
+                        </div>
+                    
+                      </div>
+                      
+                  <!-- </div> -->
+        
+        
+                    <p>Smart Home & Garden</p>
+                    <p>Sports & Outdoors</p>
+                    <p>Consumer Electronics</p>
+                    <p>TV Boxes & Mini PCs</p>
+                    <p>Computers, Tablets & Accessories</p>
+                    <p>Toys & Hobbies</p>
+                    <p>Phones & Accessories</p>
+                    <p>Automobiles & Motorcycles</p>
+                    <p>Wearable Devices</p>
+                    <p>Security Systems</p>
+                    <p>Fashion</p>
+                    </div>
+             
+                  
+                  </div>
+                  <div>
+                    <div id="new">
+                        <a href="new.html">New</a>
+                    <a href="top-seller.html">Best Selling</a>
+                    <a href="https://www.geekbuying.com/top_brand_at_geekbuying/">Brand</a>
+                    <a href="#">Clearance</a>
+                    <a href="#">Deals</a>
+                    <a href="#">App Only</a>
+                    <a href="coupon.html">Coupon</a>
+                  </div>
+                  </div>
+            </div>
+        
+        </div>
+            
+        </div>
+        <div id="first">
+           <h2>New-Arrivals</h2>
+           
+       </div>
+      
+        <div id="filter">
+           
+        <nav id="filter1" class="sidebar">
+           <!-- <div class="text">
+              Side Menu
+           </div> -->
+           <a href="#">All Categories</a>
+           <ul>
+             
+              <li>
+                 <a href="#" class="feat-btn">Smart Home & Garden <img id="img88" src="https://sugarbook.com/assets/img/down-arrow-light-grey.svg" alt="">
+                
+                 </a>
+                 <ul class="feat-show">
+                    <li><a href="#">  Robot Vacuum Cleaners</a></li>
+                    <li><a href="#">Cordless Vacuum Cleaners</a></li>
+                    <li><a href="#">Ceiling Lights</a></li>
+                    <li><a href="#">Hair Care & Salon</a></li>
+                    <li><a href="#">Clocks</a></li>
+                    <li><a href="#">Wall Art</a></li>
+                    <li><a href="#">Kitchen Appliances</a></li>
+                    <li><a href="#">Personal Care</a></li>
+                 </ul>
+              </li>
+              <li>
+                 <a href="#" class="serv-btn">Consumer Electronics
+                    <img id="img91" src="https://sugarbook.com/assets/img/down-arrow-light-grey.svg" alt="">
+                 </a>
+                 <ul class="serv-show">
+                    <li><a href="#">Earbud Headphones</a></li>
+                    <li><a href="#">FDM 3D Printers</a></li>
+                    <li><a href="#">Laser Engravers & Cutters</a></li>
+                    <li><a href="#">3D Printer Accessories</a></li>
+                    <li><a href="#">Projectors</a></li>
+                    <li><a href="#">Accessories</a></li>
+                    <li><a href="#">Measurement & Analysis</a></li>
+                    <li><a href="#">Handheld Game Consoles</a></li>
+                 </ul>
+              </li>
+              <li><a href="#" class="new-btn">Sports & Outdoors
+                 <img id="img92" src="https://sugarbook.com/assets/img/down-arrow-light-grey.svg" alt="">
+              </a>
+                 <ul class="new-show">
+                    <li><a href="#">Outdoor Generators & Portable</a></li>
+                    <li><a href="#">Water Sports</a></li>
+                    <li><a href="#">Tent & Hammock</a></li>
+                    <li><a href="#">Sports & Action Cameras</a></li>
+                    <li><a href="#">Other Outdoor Gear</a></li>
+                    <li><a href="#">Bikes</a></li>
+                    <li><a href="#">Travel Supplies</a></li>
+                    <li><a href="#">Other Accessories</a></li>
+                 </ul>
+              </li>
+              <li><a href="#">Computers, Tablets & Acc ..
+                 <img id="img93" src="https://sugarbook.com/assets/img/down-arrow-light-grey.svg" alt="">
+              </a></li>
+              <li><a href="#">Wearable Devices
+                 <img id="img94" src="https://sugarbook.com/assets/img/down-arrow-light-grey.svg" alt="">
+              </a></li>
+              <li><a href="#">Toys & Hobbies
+                 <img id="img95" src="https://sugarbook.com/assets/img/down-arrow-light-grey.svg" alt="">
+              </a></li>
+              <li><a href="">Security Systems
+                 <img id="img96" src="https://sugarbook.com/assets/img/down-arrow-light-grey.svg" alt="">
+              </a></li>
+              <li><a href="">Phones & Accessories
+                 <img id="img97" src="https://sugarbook.com/assets/img/down-arrow-light-grey.svg" alt="">
+              </a></li>
+              <li><a href="">Fashion
+                 <img id="img98" src="https://sugarbook.com/assets/img/down-arrow-light-grey.svg" alt="">
+              </a></li>
+              <li><a href="">Automobiles & Motorcycles
+                 <img id="img99" src="https://sugarbook.com/assets/img/down-arrow-light-grey.svg" alt=""> </a></li>
+             
+           </ul>
+        </nav>
+        
+        <div id="filter2">
+           
+           <div id="filter11">
+  
+             <div id="day">
+              <p class="p55">New Arrived :
+              </p>
+              <div><p class="p22">7 days </p></div>
+              <div><p class="p22">15 days </p></div>
+              <div><p class="p22">30 Days</p></div>  
+             </div>
+              <div id="opt">
+                 <p class="p55">Filter :
+                 </p>
+                 <div id="kypn">
+                    <select name="" id="">
+                        <option value=""> India </option>
+                       <option value=""> Netherland</option>
+                       <option value="">Europe</option>
+                       <option value="">Poland</option>
+                       <option value="">Germany</option>
+                       <option value="">spain</option>
+                       <option value="">United State</option>
+                       <option value="">United kingdom</option>
+                       <option value="">China</option>
+                       <option value="">Hong Kong</option>
+                       <option value="">Canada</option>
+                       <option value="">Japan</option>
+                    </select>
+                      
+                 </div>
+  
+                 
+                
+                <div class="sale"><p><span style=" color: grey;"><i style="font-size: 1.5rem;" class="fa-light fa-stop"></i></span> On Sale</p></div>
+                <div class="sale1"><p><span style=" color: grey;"><i style="font-size: 1.5rem;" class="fa-light fa-stop"></i></span>Free Shipping only </p></div>
+                <p id="dash" style="margin-top: .6rem;">Price :</p>
+                <form style="margin-top:.5rem; margin-left: .5rem;">
+                   <input  type="number" placeholder="Min">
+                   <p style="margin-top: .3rem; margin-right: .4rem;">-</p>
+                   <input type="number" placeholder="Max">
+                  
+                </form>
+  
+              </div>    
+              
+              <div id="sort">
+                 <p class="p55">Sort By : </p>
+                 <div>
+                 <button id="btn12" onclick="sort1()"><a href="new.html">Best Match</a></button>
+                 <button id="btn12" onclick="sort2()"><a href="new.html" >New Arrival</a></button>
+                 <button id="btn12" onclick="priceshort()">Price</button>
+              </div>
+              </div>    
+           </div>
+           
+           <div id="filter22">
+              
+           </div>
+        </div>
+     </div>
+     
+    
+  
+        
+     
+     
+<div id="footer_flex" style="margin-left:8% ; display: flex; margin-top: 40px;" >
+    <div id="help">
+      <div  style="margin-right: 60px">
+        <h4>Help </h4>
+        <p>Order status</p>
+        <p>About us</p>
+        <p>Contact us</p>
+        <p>Warranty</p>
+        <p>FAQs</p>
+        <p>Sitemap</p>
+      </div>
+      <div  style="margin-right: 60px">
+        <h4>Support</h4>
+        <p>Payment information</p>
+        <p>Shipping guide</p>
+        <p>Wholesale</p>
+        <p>Affiliates</p>
+      </div>
+      <div  style="margin-right: 60px">
+        <h4>Policies</h4>
+        <p>Terms & conditions</p>
+        <p>Return policy</p>
+        <p>Privacy</p>
+        <p>Declaration</p>
+        <p>Customs</p>
+      </div>
+    </div>
+    <div  id="barcode" style="margin-left:20%">
+      
+      <div>
+        <!-- <h3>Download The App</h3> -->
+          <img src="https://content1.geekbuying.com/V1.4/en/images/index_images/android_app.png" id="bar" alt="">
+      </div>
+      <div>
+          <div><img src="https://content1.geekbuying.com/V1.4/en/images/index_images/app_store.jpg" alt=""></div>
+          <div><img src="https://content1.geekbuying.com/V1.4/en/images/index_images/google_play.jpg" alt=""></div>
+          <div><img src="https://content1.geekbuying.com/V1.4/en/images/index_images/gallery.jpg" alt=""></div>
+          
+        
+      </div>
+      
+  </div>
+  </div>
+  
+  <h4 id="peo">Popular Searches</h4>
+  <div id="peopler_search">
+    <button  style="color:gray  " >Geekbuying Coupon</button>
+    <button  style="color:gray  ">Roborock Q7 Max</button>
+    <button  style="color:gray  ">Tronsmart Bluetooth Speakers</button>
+    <button  style="color:gray  ">Windows Mini PC</button>
+    <button  style="color:gray  ">android tv boxes</button>
+    <button  style="color:gray  "> LDS Robot Vacuum</button>
+    <button  style="color:gray  ">Electric Bike</button>
+    <button  style="color:gray  ">OnexPlayer mini AMD</button>
+  
+  
+  </div>
+  
+  <div id="lang">
+    <p>| English | Español | Français | Deutsch | Italiano | Português | Nederlands | Polski | Русский | Türkçe |
+      ελληνικά | Magyar | لعربي | עברית | ไทย 日本語 |</p>
+  </div>
+  <hr>
+  
+  <div id="pay"><img src="https://content1.geekbuying.com/V1.4/en/images/index_images/footicons.jpg?v=20220427"
+      alt=""></div>
+   </body>
+</html>
+<script src="./Scripts/furniture.js"></script>

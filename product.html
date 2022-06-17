@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles/navbar.css">
+    <link rel="stylesheet" href="./styles/product.css">
+
+    
+    <title>Document</title>
+
+    <script src="https://kit.fontawesome.com/24c494a6b6.js" crossorigin="anonymous"></script>
+
+     <style>
+
+
+</style>
+</head>
+<body>
+
+  
+    <!-- NAVBAR STARTS FROM HERE -->
+
+    <div id="rect1">
+      <img src="https://img.gkbcdn.com/s3/bn/2205/1500x125-628b774b2b40c9019c2ac472.jpg" alt="">
+  </div>
+  <div id="rect2">
+      <p id="rect22"><i class="fa-thin fa-mobile-screen hello"></i>Save BIG with our app!</p>
+      <p>Language</p>
+     
+      <p>Support Center</p>
+  </div>
+  <hr>
+  <div id="rect3">
+      <img src="https://cdn.honey.io/images/store-logos/7480670477919437073.png" alt="">
+      <input type="text" placeholder="All categories  ▼  |      Search by Keywords"  >
+      <img src="./Images/search.PNG" alt="">
+      <i onclick="signinfun()" class="fa-solid fa-user-large"></i>
+      <p onclick="signinfun()">Sign In</p>
+      <i onclick="cartfun()" class="fa-solid fa-cart-shopping cartblack"></i>
+      <p onclick="cartfun()"class='totalItemInCart' >Cart</p>
+  </div>
+  <div id="rect4">
+      <p> Categories ▼</p>
+      <p>New</p>
+      <p>Best Selling</p>
+      <p>Brand</p>
+      <p>Clearance</p>
+      <p>Deals</p>
+      <p>App Only</p>
+      <p>Coupon</p>
+  </div>
+  <hr>
+
+  <!-- NAVBAR ENDS HERE -->
+
+    <!-- ------------------------------------------------------------------------------------------------ -->
+  <div id="container">
+    <div class="top">
+        <img  style="height:110px"  src="https://img.gkbcdn.com/s3/c/2206/1210x220HW10-62a3185a2b40c913ccae4dc9.jpg"alt="">
+    </div>
+    <div class="bottom">
+        <div class="card1">
+            <h4>Bikes</h4>
+            <p>E-Bikes, Scooters & Wheels</p>
+            <p>Exercise</p>
+            <p>Outdoor Sports Camers</p>
+            <p>Cycling</p>
+            <p>Outdoor Recreation</p>
+            <p>Camping & Hiking</p>
+            <p>Flashing & Torch</p>
+            <p>Other Outdoor grar</p>
+            <p>Outdoor Apparels</p>
+            <p>Athletics</p>
+            <p>Hunting & Shooting</p>
+        </div>
+        <div class="card2">
+            <div class="box1">
+               
+                <div class="slideshow-container">
+      
+                  <div class="mySlides fade">
+                 
+                    <img src="https://content1.geekbuying.com/V1.4/en/promotion/20220419q/image/ban-0.jpg?4" style="width:100%;height: 200px;">
+                   
+                  </div>
+
+                  </div>
+                 
+                
+                </div>
+                  
+           
+            <div class="box2">
+                <div class="brand">
+                    <div><p style="margin: 5px 0 0 10px ;">Brands</p></div>
+                    <div><img src="https://img.gkbcdn.com/s3/b/ado.jpg" alt=""></div>
+                    <div><img src="https://img.gkbcdn.com/s3/b/2006/fiido.jpg?v=-674318602" alt=""></div>
+                    <div><img src="https://img.gkbcdn.com/s3/b/Logo/himo.jpg?v=1500289693" alt=""></div>
+                    <div><img src="https://img.gkbcdn.com/s3/b/eleglide.jpg" alt=""></div>
+                    <div><img src="https://img.gkbcdn.com/s3/b/xiaomi.jpg" alt=""></div>
+                    <div><img src="https://img.gkbcdn.com/s3/b/Logo/orico.jpg" alt=""></div>
+                </div>
+                <div class="filter">
+                    <div><p style="margin-top: 5px; font-size: 20px;">Filter :</p></div>
+                    <div> <select  id="brandshort" onchange="brand()" style="width: 100%; height: 100%;">
+                        <option value="">Filter by Brand</option>
+                        <option value="ADO">ADO</option>
+                        <option value="FIIDO">FIIDO</option>
+                        <option value="HIMO">HIMO</option>
+                        <option value="Eliglide">Eliglide</option>
+                        <option value="ENGWE">ENGWE</option>
+                        
+                      </select>
+                    </div>
+                </div>
+                <div class="sortby">
+                    <div><p style="margin-top: 5px; font-size: 20px;">Sort By:</p></div>
+                    <div><select  id="priceshort" onchange="priceshort()"style="width: 100%; height: 100%;">
+                        <option value="">Sort by Price</option>
+                        <option value="high">High to Low</option>
+                        <option value="low">Low to High</option>
+                      </select></div>
+                </div>
+            </div> 
+            <div class="box3"> 
+                
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- FOOTER STARTS FROM HERE -->
+
+
+
+<div id="footer_flex" style="margin-left:8%">
+  <div id="help">
+    <div>
+      <h4>Help </h4>
+      <p>Order status</p>
+      <p>About us</p>
+      <p>Contact us</p>
+      <p>Warranty</p>
+      <p>FAQs</p>
+      <p>Sitemap</p>
+    </div>
+    <div>
+      <h4>Support</h4>
+      <p>Payment information</p>
+      <p>Shipping guide</p>
+      <p>Wholesale</p>
+      <p>Affiliates</p>
+    </div>
+    <div>
+      <h4>Policies</h4>
+      <p>Terms & conditions</p>
+      <p>Return policy</p>
+      <p>Privacy</p>
+      <p>Declaration</p>
+      <p>Customs</p>
+    </div>
+  </div>
+  <div  id="barcode" style="margin-left:20%">
+    
+    <div>
+      <!-- <h3>Download The App</h3> -->
+        <img src="https://content1.geekbuying.com/V1.4/en/images/index_images/android_app.png" id="bar" alt="">
+    </div>
+    <div>
+        <div><img src="https://content1.geekbuying.com/V1.4/en/images/index_images/app_store.jpg" alt=""></div>
+        <div><img src="https://content1.geekbuying.com/V1.4/en/images/index_images/google_play.jpg" alt=""></div>
+        <div><img src="https://content1.geekbuying.com/V1.4/en/images/index_images/gallery.jpg" alt=""></div>
+        
+      
+    </div>
+    
+</div>
+</div>
+
+<h4 id="peo">Popular Searches</h4>
+<div id="peopler_search">
+  <button  style="color:gray  " >Geekbuying Coupon</button>
+  <button  style="color:gray  ">Roborock Q7 Max</button>
+  <button  style="color:gray  ">Tronsmart Bluetooth Speakers</button>
+  <button  style="color:gray  ">Windows Mini PC</button>
+  <button  style="color:gray  ">android tv boxes</button>
+  <button  style="color:gray  "> LDS Robot Vacuum</button>
+  <button  style="color:gray  ">Electric Bike</button>
+  <button  style="color:gray  ">OnexPlayer mini AMD</button>
+
+
+</div>
+
+<div id="lang">
+  <p>| English | Español | Français | Deutsch | Italiano | Português | Nederlands | Polski | Русский | Türkçe |
+    ελληνικά | Magyar | لعربي | עברית | ไทย 日本語 |</p>
+</div>
+<hr>
+
+<div id="pay"><img src="https://content1.geekbuying.com/V1.4/en/images/index_images/footicons.jpg?v=20220427"
+    alt=""></div>
+<!-- FOOTER ENDS HERE -->
+
+</body>
+</html>
+<script src="./scripts/product.js"></script>

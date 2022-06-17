@@ -1,0 +1,1941 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://kit.fontawesome.com/24c494a6b6.js" crossorigin="anonymous"></script>
+
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+
+        }
+
+        #upperContainer {
+            display: flex;
+            width: 100%;
+            height: auto;
+            gap: 20Px;
+        }
+
+        #divForImg {
+            width: 45%;
+            height: auto;
+            /* border: 2px solid red; */
+        }
+
+        #productImg {
+            width: 100%;
+            height: 550px;
+        }
+
+        #divForProduvtDetail {
+            display: flex;
+            flex-direction: column;
+            gap: px;
+            width: 47%;
+            margin-top: 50px;
+            /* border: 2px solid red; */
+            /* align-items: unset; */
+        }
+
+        #dForBrandStar {
+            display: flex;
+            gap: 25px;
+            /* position: absolute; */
+            /* position: relative; */
+        }
+
+        .displayAndGap {
+            display: flex;
+            gap: 10px;
+        }
+
+        .fakeSlatColor {
+            color: #999999;
+        }
+
+        .displayFlex {
+            display: flex;
+            align-items: center;
+        }
+
+
+
+        .fa-star {
+            color: #ff9c01;
+            margin-left: -5px;
+            font-size: 13px;
+        }
+
+        .gap {
+            gap: 10px;
+        }
+
+        #dForProNam {
+            height: 50px;
+            position: relative;
+        }
+
+        .margintop {
+            margin-top: 15px;
+            font-size: 16px;
+        }
+
+        #star {
+            margin-top: -20px;
+        }
+
+        .fa-bolt {
+            font-size: 25px;
+        }
+
+        .colorWhite {
+            color: white;
+        }
+
+        .flashAndTimer {
+            background-color: #ff9c01;
+            height: 40px;
+        }
+
+        .orangeColor {
+            background-color: #ff9c01;
+        }
+
+        #flashAndTimerId {
+            justify-content: space-between;
+            padding-right: 20px;
+            padding-left: 20px;
+            /* position: relative; */
+        }
+
+        .timer {
+            gap: 4px;
+        }
+
+        .currentPrice {
+            color: #ff9c01;
+        }
+
+        .mainPriceDiv {
+            gap: 40px;
+            padding-left: 20px;
+            /* position: absolute; */
+
+        }
+
+        .offPrice {
+            padding: 3px;
+            ;
+        }
+
+        .colorBlue {
+            color: blue;
+        }
+
+        .offNewUser {
+            background-color: #de4576;
+            padding: 4px;
+        }
+
+        .coupenDiv {
+            padding-left: 20px;
+            cursor: pointer;
+        }
+
+        #dForTimerAndPrice {
+            padding-bottom: 20px;
+            background-color: #f3f3f3;
+            display: flex;
+            flex-direction: column;
+            height: 150px;
+            /* height: auto; */
+            /* justify-content: s */
+            /* position: absolute; */
+        }
+
+        #hoverDiv {
+            width: 40%;
+            /* height: 150px; */
+            padding: 0px 20px;
+            padding-top: 10px;
+            display: none;
+            position: absolute;
+            color: black;
+            background-color: white;
+            padding-bottom: 20px;
+            border: .5px dotted gray;
+
+            /* margin-top: 20px; */
+
+
+        }
+
+        .hoverUpperP {
+            font-size: 25px;
+            ;
+        }
+
+        .fetNowBtn {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .hoverText {
+            width: 70%;
+            height: 50%;
+            border-right: 1px dotted green;
+
+        }
+
+        .getNowBtnDiv {
+            width: 40%;
+            height: 100%;
+            display: flex;
+            /* align-items: center; */
+            justify-content: center;
+        }
+
+        .getNowBtn {
+            width: 55%;
+            height: 30px;
+            border-radius: 50%;
+            background-color: rgb(211, 70, 70);
+            cursor: pointer;
+        }
+
+        .valid7Day {
+            margin-top: -10px;
+        }
+
+        .maxSaveHover {
+            background-color: #f3f3f3;
+            margin-top: -7px;
+            /* padding-left: 7px; */
+            padding: 20px 7px;
+        }
+
+
+
+        #dropDown:hover #hoverDiv {
+            display: block;
+        }
+
+
+
+        #dForShip {
+            gap: 30px;
+            padding-left: 20px;
+        }
+
+        .countryDiv {
+            width: 70px;
+            height: 33px;
+            border: 1px solid blue;
+            color: blue;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .itemReduce,
+        .itemIncrease {
+            width: 32px;
+            height: 23px;
+            border: .5px solid grey;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            color: gray;
+            font-weight: bold;
+        }
+
+        .typeTotalProduct {
+            height: 20px;
+            width: 55px;
+            text-align: center;
+        }
+
+        #dForQuantity {
+            padding-left: 20px;
+            gap: 63px;
+        }
+
+        #dForShipping {
+            gap: 30px;
+            padding-left: 20px;
+        }
+
+        #dForBtn {
+            padding-left: 20px;
+        }
+
+        .buyNowBtn {
+            width: 180px;
+            height: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: #fff5e5;
+            color: #ffb23a;
+            border: .5px solid #ffb23a;
+            cursor: pointer;
+        }
+
+        .addToCartBtn {
+            width: 180px;
+            height: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            background-color: #ffb23a;
+            border: none;
+            cursor: pointer;
+            margin-left: 20px;
+        }
+
+
+
+        .fa-heart {
+            font-size: 20px;
+        }
+
+        .freeShip {
+            font-weight: bold;
+        }
+
+        .movePicContainer {
+            justify-content: center;
+            gap: 5px;
+            /* width: 70px */
+            width: 100%;
+            height: 70px;
+        }
+
+        .movePicContainer>div {
+            border: .5px solid blueviolet;
+            width: 70px;
+            height: 70px;
+        }
+
+        .smallProductImg {
+            width: 100%;
+            height: 100%;
+        }
+
+        .sliderMainDiv {
+            margin-top: 50px;
+        }
+
+        .slidText {
+            margin-left: 50px;
+        }
+
+        /* slid  css */
+
+
+        #midSlid {
+            display: flex;
+            width: auto;
+            /* border: 1px solid red; */
+        }
+
+        #backward,
+        #forward {
+            /* height: 600px; */
+            /* border: 2px solid blue; */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            /* width: 20px; */
+        }
+
+
+
+        .circle {
+            /* display: none; */
+            width: 50px;
+            height: 50px;
+        }
+
+        #midSlid:hover .circle {
+            /* display: block; */
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            /* border: 2px solid red; */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: rgb(173, 167, 167);
+            cursor: pointer;
+        }
+
+        .fa-chevron-left,
+        .fa-chevron-right {
+            color: white;
+            font-size: 25px;
+        }
+
+
+        .productDetailMainBox {
+            width: auto;
+            height: auto;
+            /* border: 2px solid blue; */
+            padding: 18px;
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            grid-template-rows: auto;
+            margin-top: 10px;
+            gap: 10px;
+
+        }
+
+        .div_image_productdetail {
+            padding: 10px;
+            height: 300px;
+            /* wi */
+            box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding-bottom: 30px;
+            background-color: white;
+            /* margin-left: 10px; */
+        }
+
+        .div_image_productdetail:hover {
+            box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+        }
+
+
+
+        .productImgHoverSale {
+            width: 250px;
+            height: 245px;
+            /* border: 2px solid red; */
+        }
+
+        .imgHoverSale {
+            width: 250px;
+            height: 270px;
+            /* border-radius: 2px solid red; */
+        }
+
+        .productImg {
+            /* border: 2px solid green; */
+            width: 250px;
+            height: 245px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .hoverSaleDiv {
+            /* border: 2px solid grey; */
+            width: 250px;
+            height: 270px;
+            display: flex;
+            position: relative;
+            z-index: 2;
+            margin-top: -280px;
+        }
+
+
+        .hide {
+            display: none;
+            width: 30px;
+            height: 30px;
+            background-color: #dd0285;
+            border-radius: 2px;
+
+        }
+
+
+        .fa-eye {
+            color: aliceblue;
+        }
+
+        .hoverSaleDiv:hover>.parntOfHover>.hide {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .area {
+            width: 50%;
+            height: 100%;
+            /* border: 1px solid red; */
+        }
+
+        .parntOfHover {
+            display: flex;
+            flex-direction: row-reverse;
+            align-items: center;
+        }
+
+        .parntOfSale {
+            display: flex;
+            flex-direction: row-reverse;
+        }
+
+        #saleDiv {
+            width: 40px;
+            height: 40px;
+            background-color: #dd0285;
+            color: white;
+            display: flex;
+            margin: 40px 20px;
+            align-items: center;
+            /* padding-top: 10px; */
+            justify-content: center;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 12px;
+            border-radius: 50%;
+
+        }
+
+        .underlineRemove {
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+        .productDetail {
+            width: 250px;
+            height: 110px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+            text-align: center;
+
+        }
+
+        .productName {
+            font-size: 12px;
+
+
+        }
+
+        .starRecomSlid {
+            color: #eca330;
+            margin-right: 5px;
+
+        }
+
+        .starRating {
+            font-size: 10px;
+            margin-top: -5px;
+            /* background-color: #008021; */
+        }
+
+        .price {
+            display: flex;
+            justify-content: space-evenly;
+            width: 60%;
+            align-items: center;
+            margin: auto;
+            /* margin-top: -.5px; */
+        }
+
+        .offprice {
+            font-size: 10px;
+            /* font-weight:0 */
+        }
+
+        .currentprice {
+            font-size: 15px;
+            color: #dd0285;
+            font-weight: bold;
+        }
+
+        .discount {
+            font-size: 12px;
+            color: #008021;
+            font-weight: bold;
+        }
+
+        .addToCartOrFev {
+            display: block;
+            display: flex;
+            width: 60%;
+            margin: auto;
+            justify-content: space-between;
+            margin-bottom: -2px;
+
+        }
+
+
+        .addToCart {
+            display: flex;
+            align-items: center;
+            height: 25px;
+            width: 100px;
+            justify-content: space-around;
+            font-size: 12px;
+        }
+
+        .cartbutton {
+            background-color: #dd0285;
+            border: none;
+            border-radius: 3px;
+            color: white;
+        }
+
+
+
+        .cartbutton:hover {
+            background-color: #d16ba8;
+        }
+
+        .addToFevBut {
+            background-color: gray;
+            border: none;
+            color: white;
+            width: 30px;
+            border-radius: 3px;
+        }
+
+        .addToFevBut:hover {
+            background-color: #dd0285;
+        }
+
+
+
+
+
+        .pSale {
+            text-align: center;
+        }
+
+
+        /* NAVBAR CSS STARTS FROM HERE */
+
+        #rect1 img {
+            width: 102%;
+            margin-top: -10px;
+            margin-left: -10px;
+            margin-right: -10px;
+        }
+
+        #rect2 {
+            margin: auto;
+            /* border: 1px solid; */
+            width: 80%;
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            gap: 25px;
+            height: 38px;
+            font-size: 13px;
+
+        }
+
+        .hello {
+            font-size: 30px;
+        }
+
+        #rect22 {
+            display: flex;
+            align-items: center;
+
+        }
+
+        #rect3 {
+            /* border: 1px solid; */
+            height: 72px;
+            width: 80%;
+            margin: auto;
+            display: flex;
+            align-items: center;
+        }
+
+        #rect3 img {
+            height: 40px;
+            cursor: pointer;
+        }
+
+        #rect3 input {
+            width: 80%;
+            height: 37px;
+            padding-left: 30px;
+            font-size: 14px;
+            border: none;
+            border: 2px solid blue;
+            border-radius: 5px;
+        }
+
+        #rect3 :nth-child(4) {
+            margin-left: 40px;
+        }
+
+        #rect3 :nth-child(5) {
+            width: 80px;
+            /* border: 1px solid; */
+        }
+
+        #rect3 :nth-child(6) {
+            margin-left: 50px;
+
+        }
+
+        #rect3 :nth-child(8) {
+            margin-left: 50px;
+        }
+
+        #rect3 img:nth-child(3) {
+            height: 40px;
+            margin-left: -54px;
+            cursor: pointer;
+        }
+
+        #rect3 img:nth-child(4) {
+            height: 50px;
+            margin-left: 100px;
+            cursor: pointer;
+        }
+
+        #rect3 :nth-child(5) {
+            font-size: 12px;
+            cursor: pointer;
+            margin-left: 10px;
+        }
+
+        #rect3 :nth-child(7) {
+            margin-left: 10px;
+            font-size: 12px;
+            cursor: pointer;
+
+        }
+
+        #rect3 :nth-child(9) {
+            margin-left: 10px;
+            font-size: 12px;
+            cursor: pointer;
+        }
+
+        #rect3>i {
+            font-size: 30px;
+            margin-left: 40px;
+            cursor: pointer;
+        }
+
+        #rect4 {
+            /* border: 1px solid; */
+            height: 30px;
+            align-items: center;
+            margin: auto;
+            gap: 50px;
+            width: 80%;
+            display: flex;
+            font-size: 14px;
+            color: #333333;
+            font-weight: bold;
+
+
+        }
+
+        #rect4 p:nth-child(1) {
+            font-size: 16px;
+            /* margin-left: 20px; */
+        }
+
+        #rect4>p {
+            cursor: pointer;
+        }
+
+        hr {
+            border: 0.5px solid rgb(240, 237, 237);
+        }
+
+        /* NAVBAR CSS ENDS HERE */
+
+        /* FOOTER CSS STARTS FROM HERE */
+
+        #footer {
+            width: 100%;
+            /* height: 400px; */
+            /* border: 1px solid red; */
+            padding-top: 50px;
+            display: flex;
+            margin-top: 8rem;
+        }
+
+        #footer>div {
+            /* border: 1px solid blue; */
+            width: 100%;
+            /* height: 200px; */
+        }
+
+        #social {
+            display: flex;
+            /* border: 1px solid black;  */
+        }
+
+        #social>div {
+            /* border: 1px solid; */
+            width: 100%;
+            height: 50px;
+            gap: 30px;
+        }
+
+        .social_gap>i {
+            margin-left: 20px;
+            /* border: 1px solid red; */
+        }
+
+        .social_gap>div>i {
+            margin-left: 20px;
+            /* border: 1px solid red; */
+        }
+
+        .social_gap {
+            display: flex;
+            gap: 30px;
+        }
+
+        #help {
+            display: flex;
+            margin-left: 30px;
+        }
+
+        #help>div {
+            width: 30%;
+            /* height: 200px; */
+            /* border: 1px solid red; */
+            font-size: 13px;
+        }
+
+        #scribe {
+            width: 350px;
+            height: 25px;
+            font-size: 13px;
+            margin-left: 1.5rem;
+        }
+
+        #footer>div>button {
+            width: 120px;
+            height: 31px;
+            margin-left: -4px;
+            border: none;
+            background-color: #074EA3;
+            color: white;
+        }
+
+        #hr1>hr {
+            border: none;
+        }
+
+        #marginleft {
+            margin-left: 100px;
+        }
+
+        #text {
+            width: 75%;
+            /* line-height: ; */
+            font-size: 13px;
+        }
+
+        #peo {
+            width: 80%;
+            margin: auto;
+            margin-top: 30px;
+        }
+
+        #peopler_search {
+            width: 80%;
+            margin: auto;
+            margin-top: 20px;
+        }
+
+        #peopler_search>button {
+            gap: 30px;
+            /* border: 1px solid blue; */
+            height: 1.5rem;
+            margin-left: .5rem;
+            background-color: rgb(236, 231, 231);
+            border: none;
+            cursor: pointer;
+        }
+
+        button:hover {
+            color: blue;
+        }
+
+        #lang {
+            margin: auto;
+            margin-left: 200px;
+            margin-top: 20px;
+            font-weight: 600;
+            color: grey;
+        }
+
+        #pay {
+            margin-left: 100px;
+            margin-top: 30px;
+        }
+
+        #pay>img {
+            width: 60rem;
+        }
+
+        /* product css */
+        #printdata {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            grid-template-rows: auto;
+            gap: 20px;
+        }
+
+
+        .image>img {
+            width: 100%;
+            /* border: 5px solid red; */
+            height: 400px;
+        }
+
+        #buybtn {
+            color: white;
+            background-color: tomato;
+            width: 70px;
+            height: 25px;
+        }
+
+        #geek_buying {
+            margin-left: 1rem;
+        }
+
+        h4 {
+            margin-left: .75rem;
+            font-size: .85rem;
+        }
+
+        .underelineColor {
+            color: #333333;
+        }
+
+        /* FOOTER CSS ENDS HERE */
+    </style>
+</head>
+
+<body>
+    <!-- NAVBAR STARTS FROM HERE -->
+
+    <div id="rect1">
+        <img src="https://img.gkbcdn.com/s3/bn/2205/1500x125-628b774b2b40c9019c2ac472.jpg" alt="">
+    </div>
+    <div id="rect2">
+        <p id="rect22"><i class="fa-thin fa-mobile-screen hello"></i>Save BIG with our app!</p>
+        <p>Language</p>
+
+        <p>Support Center</p>
+    </div>
+    <hr>
+    <div id="rect3">
+        <img src="https://cdn.honey.io/images/store-logos/7480670477919437073.png" alt="">
+        <input type="text" placeholder="All categories  ▼  |      Search by Keywords">
+        <img src="./Images/search.PNG" alt="">
+        <i onclick="signinfun()" class="fa-solid fa-user-large"></i>
+        <a class="underlineRemove underelineColor" href="./SignIn.html">
+            <p>Sign In</p>
+        </a>
+        </a>
+        <i onclick="cartfun()" class="fa-solid fa-cart-shopping cartblack"></i>
+        <a class="underlineRemove underelineColor" href="./shoppingcart.html">
+            <p class="totalItemInCart">Cart</p>
+        </a>
+    </div>
+    <div id="rect4">
+        <p> Categories ▼</p>
+        <p>New</p>
+        </a>
+
+        <p>Best Selling</p>
+        </a>
+        <p>Brand</p>
+        <p>Clearance</p>
+        <p>Deals</p>
+        <p>App Only</p>
+
+        <p>Coupon</p>
+        </a>
+    </div>
+    <hr>
+
+    <!-- NAVBAR ENDS HERE -->
+
+
+    <div id="upperContainer">
+        <div id="divForImg">
+            <img id="productImg" src="https://img.gkbcdn.com/s3/bn/2205/497705-626f45ba2b40c9339c112e8e.jpg" alt="img">
+            <div class="movePicContainer displayFlex border">
+            </div>
+        </div>
+        <div id="divForProduvtDetail">
+            <div id="dForProNam" class="border">
+                <h5 class="margintop">SENBONO Max2 Smartwatch for Men Touch Screen 24 Sports Modes Waterproof Fitness
+                    Tracker for iOS Android Black Leather</h5>
+            </div>
+            <div id="dForBrandStar" class="displayFlex border">
+                <div id="brand" class="displayAndGap">
+                    <h5 class="margintop">Brand:</h5>
+                    <h5 class="fakeSlatColor margintop">Senbono</h5>
+                </div>
+                <div id="starAndReview" class="displayFlex gap ">
+                    <div id="star" class="border ">
+                        <span class="fa fa-star checked "></span>
+                        <span class="fa fa-star checked "></span>
+                        <span class="fa fa-star checked "></span>
+                        <span class="fa fa-star "></span>
+                        <span class="fa fa-star "></span>
+                    </div>
+                    <h5 class="margintop">25</h5>
+                    <h5 class="fakeSlatColor margintop">Review</h5>
+                </div>
+                <div id="question" class="displayFlex  gap">
+                    <h5 class="margintop">0</h5>
+                    <h5 class="fakeSlatColor margintop">Answered Question</h5>
+                </div>
+            </div>
+            <div id="dForitemCode" class="displayFlex  gap border">
+                <h5 class="margintop">Item Code:</h5>
+                <h5 class="fakeSlatColor margintop">497705</h5>
+            </div>
+            <div id="dForTimerAndPrice" class=" colorWhite border">
+                <div id="flashAndTimerId" class="flashAndTimer displayFlex ">
+                    <div class="flash displayFlex gap">
+                        <i class="fa-solid fa-bolt"></i>
+                        <h3>Flash Deal</h3>
+                    </div>
+                    <div class="timer displayFlex">
+                        <p>Ends In:</p>
+                        <p class="dayCount">5</p>
+                        <p>Days</p>
+                        <p class="hourCount">01</p>
+                        <p>:</p>
+                        <p class="mintueCount">34</p>
+                        <p>:</p>
+                        <p class="secondCount">36</p>
+                    </div>
+                </div>
+                <div class="mainPriceDiv displayFlex border">
+                    <div>
+                        <h5 class="fakeSlatColor">Price:</h5>
+                    </div>
+                    <div class=" currentAndStrickOff displayFlex gap">
+                        <h2 class="currentPrice">₹2593.77 </h2>
+                        <p class="fakeSlatColor  strikedOffPrice">₹3222.76</p>
+                        <p class=" pForPerDescount orangeColor offPrice">20% OFF</p>
+                    </div>
+                </div>
+                <div id="dropDown">
+                    <div class=" coupenDiv displayFlex gap border">
+                        <p class="fakeSlatColor">Coupen:</p>
+                        <p class="offNewUser">2% OFF New User</p>
+                        <p class="colorBlue">Get Coupens</p>
+                    </div>
+
+                    <div id="hoverDiv" class="border">
+                        <h3 class="margintop ">New User Coupen</h3>
+                        <div class="maxSaveHover displayFlex border">
+                            <div class="hoverText border ">
+                                <p class="hoverUpperP margintop border">2% OFF,Max Save ₹628</p>
+                                <p class="valid7Day border">Valid within 7 days after received</p>
+                            </div>
+                            <div class="getNowBtnDiv  border">
+                                <button class="getNowBtn colorWhite border">Get Now</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="dForShip" class="displayFlex border">
+                <p class="fakeSlatColor">Ship from:</p>
+                <div class="countryDiv">India</div>
+            </div>
+            <div id="dForQuantity" class="displayFlex border">
+                <p class="fakeSlatColor">QTY:</p>
+                <div class="displayFlex">
+                    <div class="itemReduce" onclick="itemReduce()">
+                        <p>-</p>
+                    </div>
+                    <div class="totalItem"><input class="typeTotalProduct" type="text"></div>
+                    <div class="itemIncrease" onclick="itemIncrease()">
+                        <p>+</p>
+                    </div>
+                </div>
+            </div>
+            <div id="dForShipping" class="displayFlex">
+                <p class="fakeSlatColor">Shipping:</p>
+                <p class="freeShip">Free Shipping</p>
+            </div>
+            <div id="dForBtn" class="displayFlex">
+                <div>
+                    <button class="buyNowBtn">
+                        <h2>Buy Now</h2>
+                    </button>
+                </div>
+                <div>
+                    <button class="addToCartBtn">
+                        <h2>Add To Cart</h2>
+                    </button>
+                </div>
+
+            </div>
+            <div id="dForPayment"></div>
+            <div id="dForMCSafe"></div>
+            <div id="dForPriceMatch"></div>
+        </div>
+    </div>
+
+
+
+    <!-- FOOTER STARTS FROM HERE -->
+
+
+
+
+    <div id="footer_flex" style="margin-left:8% ; display: flex; margin-top: 40px;">
+        <div id="help">
+            <div style="margin-right: 60px">
+                <h4>Help </h4>
+                <p>Order status</p>
+                <p>About us</p>
+                <p>Contact us</p>
+                <p>Warranty</p>
+                <p>FAQs</p>
+                <p>Sitemap</p>
+            </div>
+            <div style="margin-right: 60px">
+                <h4>Support</h4>
+                <p>Payment information</p>
+                <p>Shipping guide</p>
+                <p>Wholesale</p>
+                <p>Affiliates</p>
+            </div>
+            <div style="margin-right: 60px">
+                <h4>Policies</h4>
+                <p>Terms & conditions</p>
+                <p>Return policy</p>
+                <p>Privacy</p>
+                <p>Declaration</p>
+                <p>Customs</p>
+            </div>
+        </div>
+        <div id="barcode" style="margin-left:20% ;display:flex">
+
+
+            <img src="https://content1.geekbuying.com/V1.4/en/images/index_images/android_app.png" id="bar" alt="">
+        </div>
+        <div>
+            <div><img src="https://content1.geekbuying.com/V1.4/en/images/index_images/app_store.jpg" alt=""></div>
+            <div><img src="https://content1.geekbuying.com/V1.4/en/images/index_images/google_play.jpg" alt=""></div>
+            <div><img src="https://content1.geekbuying.com/V1.4/en/images/index_images/gallery.jpg" alt=""></div>
+
+
+        </div>
+
+    </div>
+    </div>
+
+    <h4 id="peo">Popular Searches</h4>
+    <div id="peopler_search">
+        <button style="color:gray  ">Geekbuying Coupon</button>
+        <button style="color:gray  ">Roborock Q7 Max</button>
+        <button style="color:gray  ">Tronsmart Bluetooth Speakers</button>
+        <button style="color:gray  ">Windows Mini PC</button>
+        <button style="color:gray  ">android tv boxes</button>
+        <button style="color:gray  "> LDS Robot Vacuum</button>
+        <button style="color:gray  ">Electric Bike</button>
+        <button style="color:gray  ">OnexPlayer mini AMD</button>
+
+
+    </div>
+
+    <div id="lang">
+        <p>| English | Español | Français | Deutsch | Italiano | Português | Nederlands | Polski | Русский | Türkçe |
+            ελληνικά | Magyar | لعربي | עברית | ไทย 日本語 |</p>
+    </div>
+    <hr>
+
+    <div id="pay"><img src="https://content1.geekbuying.com/V1.4/en/images/index_images/footicons.jpg?v=20220427"
+            alt=""></div>
+
+    <!-- FOOTER ENDS HERE -->
+
+</body>
+
+</html>
+<script>
+
+
+
+    let cartDataFormLocal = JSON.parse(localStorage.getItem('cart')) || []
+
+
+    let qS = (id) => {
+        return document.querySelector(id)
+    }
+
+
+    let printCartPageData = (dataForPrint) => {
+
+        dataForPrint.map((e, i, arr) => {
+
+            let { image_url, name, newimg, price, strikedoffprice } = e
+
+            let productImg = qS('#productImg')
+            productImg.src = image_url[0];
+
+            let margintop = qS('.margintop')
+            margintop.innerHTML = name;
+
+            let currentPrice = qS('.currentPrice')
+            currentPrice.innerHTML = price;
+
+            let strikedOffPrice = qS('.strikedOffPrice')
+            strikedOffPrice.innerHTML = strikedoffprice;
+
+            let todayPrice = price.split('')
+            todayPrice.splice(0, 1)
+            let afterRemoveRup = todayPrice.join('')
+
+            let strikedOffPriceForPer = strikedoffprice.split('')
+            strikedOffPriceForPer.splice(0, 1)
+            let strikedOffPriceForPerAfterRem = strikedOffPriceForPer.join('')
+
+            let perDes = Math.floor(100 - (Number(afterRemoveRup) * 100) / (Number(strikedOffPriceForPerAfterRem)))
+
+
+
+            let pForPerDescount = qS('.pForPerDescount')
+            pForPerDescount.innerHTML = `${perDes} % OFF`
+        })
+
+    }
+
+
+
+
+    printCartPageData(cartDataFormLocal);
+
+
+
+
+
+
+
+    var dataForMainCart = JSON.parse(localStorage.getItem("cartData")) || [];
+
+    let storeDataForMainCart = () => {
+
+        let productQuantity = qS('.typeTotalProduct').value;
+        let currentPrice = qS('.currentPrice').innerHTML;
+
+        let currentPriceSplit = currentPrice.split('')
+        currentPriceSplit.splice(0, 1)
+        let afterRupeesRem = currentPriceSplit.join('')
+
+        let strikedOffPrice = qS('.strikedOffPrice').innerHTML;
+        let productImg = qS('#productImg').src;
+        let productName = qS('.margintop').innerHTML;
+        let obj = {
+            price: afterRupeesRem,
+            qty: productQuantity,
+            productname: productName,
+            producturl: [productImg],
+
+        }
+        dataForMainCart.push(obj)
+        localStorage.setItem('cartData', JSON.stringify(dataForMainCart))
+        alert('Item Successfully Added To Your Cart')
+        totalItemInCartFun();
+
+
+    }
+
+
+
+    let addToCartBtn = qS('.addToCartBtn')
+    addToCartBtn.addEventListener('click', storeDataForMainCart)
+
+
+
+
+
+
+    let storeDataForwish = () => {
+
+        let currentPrice = qS('.currentPrice').innerHTML;
+        let currentPriceSplit = currentPrice.split('')
+        currentPriceSplit.splice(0, 1)
+        let afterRupeesRem = '₹' + currentPriceSplit.join('')
+
+        let strikedOffPrice = qS('.strikedOffPrice').innerHTML;
+
+        let productImg = qS('#productImg').src;
+
+        let productName = qS('.margintop').innerHTML;
+        let obj = {
+            price: afterRupeesRem,
+            name: productName,
+            image_url: [productImg],
+            strikedoffprice: strikedOffPrice,
+
+
+        }
+        dataForwish.push(obj)
+        localStorage.setItem('wish', JSON.stringify(dataForwish))
+        totalItemInWishFun();
+
+        alert('Item Successfully Added To Your Wish')
+
+    }
+
+
+
+
+
+
+
+
+
+
+    let gE = (sel) => {
+        return document.querySelector(sel)
+    }
+
+    let dayarr = [5];
+    let hrarr = [0];
+    let minarr = [23];
+    let secarr = [24];
+
+    let timer = () => {
+
+        let id = setInterval(() => {
+            secarr[0] -= 1;
+
+
+
+            if (secarr[0] == 0) {
+                if (minarr[0] >= 1) {
+                    minarr[0] -= 1;
+                    secarr[0] = 59;
+                }
+
+            }
+
+            if (minarr[0] == 0) {
+                if (hrarr[0] >= 1) {
+                    hrarr[0] -= 1;
+                    minarr[0] = 59;
+                }
+
+
+            }
+            if (hrarr[0] == 0) {
+                if (dayarr[0] >= 1) {
+                    dayarr[0] -= 1;
+                    hrarr[0] = 23;
+                }
+
+            }
+
+            if (dayarr[0] == 0 && hrarr[0] == 0 && minarr[0] == 0 && secarr[0] == 0) {
+                clearInterval(id)
+            }
+
+            let day = dayarr[0];
+
+            let hr;
+            if (hrarr[0] < 10) {
+                hr = '0' + hrarr[0]
+            }
+            else {
+                hr = hrarr[0]
+            }
+
+            let min;
+            if (minarr[0] < 10) {
+                min = '0' + minarr[0]
+            }
+            else {
+                min = minarr[0]
+            }
+
+
+            let sec;
+            if (secarr[0] < 10) {
+                sec = '0' + secarr[0]
+            }
+            else {
+                sec = secarr[0]
+            }
+
+
+            let days = gE('.dayCount')
+            days.innerHTML = day;
+
+            let hour = gE('.hourCount')
+            hour.innerHTML = hr;
+
+            let mintue = gE('.mintueCount')
+            mintue.innerHTML = min;
+
+            let second = gE('.secondCount')
+            second.innerHTML = sec;
+
+
+
+        }, 1000)
+
+
+    }
+
+    timer()
+
+
+
+
+
+
+
+    let totalItem = gE('.typeTotalProduct')
+
+    totalItem.value = 1;
+
+    let itemIncrease = () => {
+
+        let itemInBox = totalItem.value;
+        let updateItem = Number(itemInBox) + 1
+        totalItem.value = updateItem;
+
+    }
+
+
+
+    let itemReduce = () => {
+
+        let itemInBox = totalItem.value;
+        let updateItem = Number(itemInBox) - 1
+        if (updateItem < 1) {
+            return;
+        }
+        totalItem.value = updateItem;
+    }
+
+
+
+
+
+
+    let create = (tag) => {
+        return document.createElement(tag)
+    }
+
+
+    let slidDataToCartPrint = () => {
+
+
+
+        let dataForSmallPic = JSON.parse(localStorage.getItem('cart'))
+        let arrCartSlid = dataForSmallPic[0].image_url
+
+
+
+        let lefCartSlid = 0;
+        let rigCartSlid = 4;
+
+        let forwardMove = (lefCartSlid, rigCartSlid) => {
+
+
+
+
+            setTimeout(() => {
+
+                let movePicContainer = gE('.movePicContainer')
+                movePicContainer.innerHTML = null;
+
+                for (let x = lefCartSlid; x <= rigCartSlid; x++) {
+
+
+                    let smallImgDiv = create('div')
+
+                    movePicContainer.append(smallImgDiv)
+
+                    let img = create('img');
+                    img.src = arrCartSlid[x]
+                    img.setAttribute('class', 'smallProductImg')
+                    img.addEventListener('click', function () {
+                        let productImg = gE('#productImg')
+                        productImg.src = arrCartSlid[x];
+                    })
+
+                    smallImgDiv.append(img)
+
+                }
+
+
+
+                lefCartSlid++;
+                rigCartSlid++;
+
+
+                if (rigCartSlid == arrCartSlid.length) {
+                    lefCartSlid = 0;
+                    rigCartSlid = 4;
+                }
+
+                if (rigCartSlid < arrCartSlid.length) {
+                    forwardMove(lefCartSlid, rigCartSlid)
+                }
+
+
+
+            }, 3000)
+
+
+
+
+
+
+        }
+
+
+        forwardMove(lefCartSlid, rigCartSlid)
+    }
+
+
+    slidDataToCartPrint();
+
+
+
+
+
+
+    var inputdata = [
+        {
+            price: "3099.94",
+            discount: "45% off",
+            productname: "Creality Ender-3 S1 Pro 3D Printer",
+            producturl: [
+                "https://img.gkbcdn.com/p/2021-09-17/Anycubic-Vyper-3D-Printer-472768-0._w280_p1_.jpg",
+                'https://m.media-amazon.com/images/I/41n6+xC4aKL._SX38_SY50_CR,0,0,38,50_.jpg',
+                'https://m.media-amazon.com/images/I/41-JeOyHY+L._SX38_SY50_CR,0,0,38,50_.jpg',
+                'https://m.media-amazon.com/images/I/41B4a-pG6+S._SX38_SY50_CR,0,0,38,50_.jpg',
+                'https://m.media-amazon.com/images/I/51OxWhn1dkS._SX38_SY50_CR,0,0,38,50_.jpg',
+                'https://m.media-amazon.com/images/I/41mjfsPoeDL._SX38_SY50_CR,0,0,38,50_.jpg',
+
+            ],
+            strickedoff: "₹5728.92"
+        },
+        {
+            price: "₹45000 ",
+            discount: "19% off",
+            productname: "Oneplus",
+            producturl: [
+                "https://img.gkbcdn.com/p/2021-12-30/oneplus-9rt-cn-version-6-62-inch-12gb-256gb-blue-8c11d5-1640855806895._w280_p1_.jpg",
+                'https://m.media-amazon.com/images/I/316xgQxCxhL._SX38_SY50_CR,0,0,38,50_.jpg',
+                'https://m.media-amazon.com/images/I/31w-fIv7WnL._SX38_SY50_CR,0,0,38,50_.jpg',
+                'https://m.media-amazon.com/images/I/31w-fIv7WnL._SX38_SY50_CR,0,0,38,50_.jpg',
+                'https://m.media-amazon.com/images/I/41R9oD3K25L._SX38_SY50_CR,0,0,38,50_.jpg',
+                'https://m.media-amazon.com/images/I/316xgQxCxhL._SX38_SY50_CR,0,0,38,50_.jpg'
+            ],
+            strickedoff: "₹55000",
+        },
+
+        {
+            price: "16099.94 ",
+            discount: "40% Off",
+            productname: " hp I11 4G LTE Tablet PC",
+            producturl: [
+                "https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcQtQ5Grexly490r7trqfAPyon8yg-La_ySMm7Q0XLRA6QNAmSblSRCebY3thCenS6KBxR8sMvjunqY&usqp=CAc",
+                'https://m.media-amazon.com/images/I/412sxloy3LL._SS40_.jpg',
+                'https://m.media-amazon.com/images/I/41bdXCCZQdL._SS40_.jpg',
+                'https://m.media-amazon.com/images/I/411pJA9HQaL._SS40_.jpg',
+                'https://m.media-amazon.com/images/I/41fJtiQV6yL._SS40_.jpg',
+                'https://m.media-amazon.com/images/I/41VMBLiEcwL._SS40_.jpg'
+            ],
+            strickedoff: "₹27028.92",
+        },
+
+
+        {
+            price: "6289.05 ",
+            discount: "20% off",
+            productname: "1.8L Pet Water Dispenser Filter Automatic Circulation with 2 Water Flow Modes and 6",
+            producturl: [
+                "https://img.gkbcdn.com/p/2022-04-20/1-8L-Pet-Water-Dispenser-Filter-499792-0._w280_p1_.jpg",
+                'https://m.media-amazon.com/images/I/31n5+cn5PYL._AC_UL480_FMwebp_QL65_.jpg',
+                'https://m.media-amazon.com/images/I/31n5+cn5PYL._AC_UL480_FMwebp_QL65_.jpg',
+                'https://m.media-amazon.com/images/I/71Y0g0blB3S._AC_UL480_FMwebp_QL65_.jpg',
+                'https://m.media-amazon.com/images/I/41JjWoJCYvL._AC_UL480_FMwebp_QL65_.jpg',
+                'https://m.media-amazon.com/images/I/71STTQNT5rL._AC_UL480_FMwebp_QL65_.jpg'
+            ],
+            strickedoff: "₹7861.51",
+        },
+        {
+            price: "6289.05 ",
+            discount: "20% off",
+            productname: "A pair of LED Luminous Chopsticks Creative Tableware Glow Sticks for Party,",
+            producturl: [
+
+                'https://m.media-amazon.com/images/I/411Z1RupihL._AC_UL480_FMwebp_QL65_.jpg',
+                'https://m.media-amazon.com/images/I/711iHAwtI7L._AC_UL480_FMwebp_QL65_.jpg',
+                'https://m.media-amazon.com/images/I/71eWopEg2tL._AC_UL480_FMwebp_QL65_.jpg',
+                'https://m.media-amazon.com/images/I/71QM9oinLvL._AC_UL480_FMwebp_QL65_.jpg',
+
+            ],
+            strickedoff: "₹7861.51",
+        },
+
+    ]
+
+
+
+    let cartFormLocal = JSON.parse(localStorage.getItem('cart')) || []
+    let recomToCart = (e) => {
+
+        let arr = []
+        let { price, productname, producturl, strickedoff } = e
+
+        let obj = {
+            image_url: producturl,
+            name: productname,
+            price: price,
+            strikedoffprice: strickedoff
+        }
+        arr.push(obj)
+
+        localStorage.setItem('cart', JSON.stringify(arr))
+        let cartDataFormLocal = JSON.parse(localStorage.getItem('cart')) || []
+
+        window.location.reload();
+    }
+
+
+    function print(inputdata) {
+
+
+        var div_productDetailMainBox = document.querySelector('.productDetailMainBox')
+        div_productDetailMainBox.innerText = '';
+
+        inputdata.map(function (e) {
+
+
+
+
+            var div_productDetailMainBox = document.querySelector('.productDetailMainBox')
+            div_productDetailMainBox.setAttribute('id', 'productDetailMainBox')
+
+            var div_image_productdetail = document.createElement('div')
+            div_image_productdetail.setAttribute('class', 'div_image_productdetail')
+
+
+            div_image_productdetail.addEventListener('click', function () {
+                recomToCart(e)
+            })
+
+
+
+            div_productDetailMainBox.append(div_image_productdetail)
+
+            var div_productImgHoverSale = document.createElement('div')
+            div_productImgHoverSale.setAttribute('class', 'productImgHoverSale')
+
+            div_image_productdetail.append(div_productImgHoverSale)
+
+            var a_underlineRemove = document.createElement('a')
+            a_underlineRemove.setAttribute('class', 'underlineRemove')
+
+            div_productImgHoverSale.append(a_underlineRemove)
+
+            var div_imgHoverSale = document.createElement('div')
+            div_imgHoverSale.setAttribute('id', 'imgHoverSale')
+
+            a_underlineRemove.append(div_imgHoverSale)
+
+            var img_productImg = document.createElement('img')
+            img_productImg.setAttribute('class', 'productImg')
+            img_productImg.src = e.producturl[0]
+
+            div_imgHoverSale.append(img_productImg);
+
+            var div_hoverSaleDiv = document.createElement('div')
+            div_hoverSaleDiv.setAttribute('class', 'hoverSaleDiv')
+
+            div_imgHoverSale.append(div_hoverSaleDiv)
+
+            var div_parntOfHover_area = document.createElement('div')
+            div_parntOfHover_area.setAttribute('class', 'parntOfHover area')
+
+            div_hoverSaleDiv.append(div_parntOfHover_area)
+
+            var div_hide = document.createElement('div')
+            div_hide.setAttribute('class', 'hide')
+
+            div_parntOfHover_area.append(div_hide)
+
+            var i_fa_solid_fa_eye = document.createElement('i')
+            i_fa_solid_fa_eye.setAttribute('class', 'fa-solid fa-eye')
+
+            div_hide.append(i_fa_solid_fa_eye)
+
+            var div_parntOfSale_area = document.createElement('div')
+            div_parntOfSale_area.setAttribute('class', 'parntOfSale area')
+            var div_saleDiv = document.createElement('div')
+            div_saleDiv.setAttribute('id', 'saleDiv')
+            var p_sale = document.createElement('p')
+            p_sale.setAttribute('class', 'pSale')
+            p_sale.innerText = e.discount;
+
+            div_saleDiv.append(p_sale)
+
+            div_parntOfSale_area.append(div_saleDiv)
+
+            div_hoverSaleDiv.append(div_parntOfSale_area)
+
+            var div_productDetail = document.createElement('div')
+            div_productDetail.setAttribute('class', 'productDetail')
+
+            div_image_productdetail.append(div_productDetail)
+
+            var div_productName = document.createElement('div')
+            div_productName.setAttribute('class', 'productName')
+
+            div_productDetail.append(div_productName)
+
+            var p_product_name = document.createElement('p')
+            p_product_name.innerText = e.productname;
+
+            div_productName.append(p_product_name)
+
+            var div_starRating = document.createElement('div')
+            div_starRating.setAttribute('class', 'starRating')
+
+            div_productDetail.append(div_starRating)
+
+            var span1_fa_fa_star_checked = document.createElement('span')
+            span1_fa_fa_star_checked.setAttribute('class', 'fa fa-star checked starRecomSlid')
+
+            div_starRating.append(span1_fa_fa_star_checked)
+
+            var span2_fa_fa_star_checked = document.createElement('span')
+            span2_fa_fa_star_checked.setAttribute('class', 'fa fa-star checked starRecomSlid')
+
+            div_starRating.append(span2_fa_fa_star_checked)
+
+            var span3_fa_fa_star_checked = document.createElement('span')
+            span3_fa_fa_star_checked.setAttribute('class', 'fa fa-star checked starRecomSlid')
+
+            div_starRating.append(span3_fa_fa_star_checked)
+
+            var span4_fa_fa_star = document.createElement('span')
+            span4_fa_fa_star.setAttribute('class', 'fa fa-star starRecomSlid')
+
+            div_starRating.append(span4_fa_fa_star)
+
+            var span5_fa_fa_star = document.createElement('span')
+            span5_fa_fa_star.setAttribute('class', 'fa fa-star starRecomSlid')
+
+            div_starRating.append(span5_fa_fa_star)
+
+            var div_price = document.createElement('div')
+            div_price.setAttribute('class', 'price')
+
+            div_productDetail.append(div_price)
+
+            var div_offprice = document.createElement('div')
+            div_offprice.setAttribute('class', 'offprice')
+
+            div_price.append(div_offprice)
+
+            var s_for_offprice = document.createElement('s')
+            s_for_offprice.innerText = e.strickedoff;
+
+            div_offprice.append(s_for_offprice)
+
+            var div_currentprice = document.createElement('div')
+            div_currentprice.setAttribute('class', 'currentprice')
+            div_currentprice.innerText = e.price;
+
+            div_price.append(div_currentprice)
+
+            var div_discount = document.createElement('div')
+            div_discount.setAttribute('class', 'discount')
+            div_discount.innerText = e.discount;
+
+            div_price.append(div_discount)
+
+        })
+    }
+
+    let arrRecomSlid = inputdata
+
+    let lefRecomSlid = 0;
+    let rigRecomSlid = 3;
+
+    totalData = arrRecomSlid.slice(lefRecomSlid, rigRecomSlid + 1)
+
+    print(totalData)
+
+
+
+    let forward = () => {
+        lefRecomSlid += 1;
+        rigRecomSlid += 1;
+
+
+
+        if (lefRecomSlid >= arrRecomSlid.length) {
+            lefRecomSlid = lefRecomSlid - arrRecomSlid.length;
+        }
+
+        if (rigRecomSlid >= arrRecomSlid.length) {
+            rigRecomSlid = rigRecomSlid - arrRecomSlid.length;
+        }
+
+
+
+        let lefData;
+        let rigData;
+        let totalData;
+
+        if (lefRecomSlid > rigRecomSlid) {
+
+            lefData = arrRecomSlid.slice(lefRecomSlid, arrRecomSlid.length)
+            rigData = arrRecomSlid.slice(0, rigRecomSlid + 1)
+
+            totalData = [...lefData, ...rigData]
+
+        }
+        else {
+
+            totalData = arrRecomSlid.slice(lefRecomSlid, rigRecomSlid + 1)
+
+        }
+
+
+
+        print(totalData)
+
+
+
+    }
+
+
+
+
+
+    //                                                
+
+
+
+    let backward = () => {
+
+
+        lefRecomSlid -= 1;
+        rigRecomSlid -= 1;
+
+
+
+
+        if (lefRecomSlid < 0) {
+            lefRecomSlid = arrRecomSlid.length + lefRecomSlid
+        }
+
+        if (rigRecomSlid < 0) {
+            rigRecomSlid = arrRecomSlid.length + rigRecomSlid;
+        }
+
+
+
+
+
+
+        let lefData;
+        let rigData;
+        let totalData;
+
+        if (lefRecomSlid > rigRecomSlid) {
+
+            lefData = arrRecomSlid.slice(lefRecomSlid, arrRecomSlid.length)
+            rigData = arrRecomSlid.slice(0, rigRecomSlid + 1)
+
+            totalData = [...lefData, ...rigData]
+
+        }
+        else {
+
+            totalData = arrRecomSlid.slice(lefRecomSlid, rigRecomSlid + 1)
+
+        }
+
+
+
+        print(totalData)
+
+
+
+    }
+
+
+
+
+
+    let totalItemInWishFun = () => {
+        let totalItemInWish = document.querySelector('.totalItemInWish')
+
+        let wishItem = JSON.parse(localStorage.getItem('wish'))
+
+        totalItemInWish.innerHTML = wishItem.length;
+
+        totalItemInWish.style.backgroundColor = 'yellow'
+
+        totalItemInWish.style.color = 'red'
+
+        totalItemInWish.style.fontWeight = 'bold'
+
+
+
+    }
+
+    totalItemInWishFun();
+
+
+
+
+
+
+    let totalItemInCartFun = () => {
+        let totalItemIncart = document.querySelector('.totalItemInCart')
+
+        let cartItem = JSON.parse(localStorage.getItem('cartData'))
+
+        console.log(cartItem)
+        totalItemIncart.innerHTML = cartItem.length;
+
+        totalItemIncart.style.backgroundColor = 'yellow'
+
+        totalItemIncart.style.color = 'red'
+
+        totalItemIncart.style.fontWeight = 'bold'
+
+
+
+    }
+
+    totalItemInCartFun();
+
+
+
+
+</script>
